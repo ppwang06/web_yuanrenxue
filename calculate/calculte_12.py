@@ -7,11 +7,13 @@ import requests
 import base64
 from loguru import logger
 
+sessionid = "自己的sessionid"
+
 
 headers = {
     'authority': 'match.yuanrenxue.com',
     # 使用自己的 sessionid
-    'cookie': '',
+    'cookie': f'sessionid={sessionid}',
     'referer': 'https://match.yuanrenxue.com/match/12',
     'user-agent': 'yuanrenxue.project',
 }
@@ -26,7 +28,6 @@ def get_result():
         }
 
         response = requests.get('https://match.yuanrenxue.com/api/match/12', headers=headers, params=params)
-        print(response.text)
         data = response.json().get("data")
         for one in data:
             total += one.get("value")

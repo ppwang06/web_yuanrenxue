@@ -1,5 +1,7 @@
 """
 web js 逆向第十二题
+使用自己的 sessionid
+不使用 session_id 无法获取第四页 第五页的数据
 """
 import requests
 import base64
@@ -24,6 +26,7 @@ def get_result():
         }
 
         response = requests.get('https://match.yuanrenxue.com/api/match/12', headers=headers, params=params)
+        print(response.text)
         data = response.json().get("data")
         for one in data:
             total += one.get("value")

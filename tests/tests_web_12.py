@@ -9,7 +9,7 @@ headers = {
     'accept': 'application/json, text/javascript, */*; q=0.01',
     'accept-language': 'zh-CN,zh;q=0.9',
     'cache-control': 'no-cache',
-    'cookie': 'sessionid=obqaw4o1z00u7rllreesq2loxini0edo',
+    'cookie': '',
     'pragma': 'no-cache',
     'referer': 'https://match.yuanrenxue.com/match/12',
     'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',

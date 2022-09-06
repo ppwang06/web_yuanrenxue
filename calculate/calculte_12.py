@@ -9,7 +9,7 @@ from loguru import logger
 headers = {
     'authority': 'match.yuanrenxue.com',
     # 使用自己的 sessionid
-    'cookie': 'sessionid=obqaw4o1z00u7rllreesq2loxini0edo',
+    'cookie': '',
     'referer': 'https://match.yuanrenxue.com/match/12',
     'user-agent': 'yuanrenxue.project',
 }

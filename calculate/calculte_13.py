@@ -42,6 +42,7 @@ def get_data():
             "page": str(i),
         }
         response = requests.get('https://match.yuanrenxue.com/api/match/13', headers=headers, params=params)
+        logger.info(response.json())
         data = response.json().get("data")
         for one in data:
             total += one.get("value")

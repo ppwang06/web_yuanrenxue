@@ -28,7 +28,7 @@ def get_result():
         }
         sess = pyhttpx.HttpSession()
         response = sess.get("https://match.yuanrenxue.com/api/match/19", headers=headers, params=params)
-        print(response.json)
+        logger.info(response.json)
         data = response.json.get("data")
         for one in data:
             total += one.get("value")

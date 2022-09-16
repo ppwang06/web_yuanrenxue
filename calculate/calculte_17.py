@@ -22,7 +22,7 @@ def get_result():
         }
         with httpx.Client(headers=headers, http2=True) as client:
             response = client.get('https://match.yuanrenxue.com/api/match/17', params=params)
-            print(response.json())
+            logger.info(response.json())
             data = response.json().get("data")
             for one in data:
                 total += one.get("value")
